@@ -9,7 +9,30 @@ class Difference {
   	private int[] elements;
   	public int maximumDifference;
 
-	// Add your code here
+    Difference(int[] elements){
+        this.elements = elements;
+        this.maximumDifference = 0;
+    }
+
+	void computeDifference(){
+
+        for (int i = 0; i < elements.length; i++){
+
+            for (int j = i; j <elements.length; j++){
+                int diff = 0;S
+                if(elements[i] >= elements[j]){
+                    diff = elements[i] - elements[j];
+                }
+                } else {
+                    diff = elements[j] - elements[i];
+                }
+
+                if(diff > maximumDifference){
+                    maximumDifference = diff;
+                }
+            }
+        }
+    }
 
 } // End of Difference class
 
