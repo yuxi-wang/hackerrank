@@ -11,21 +11,14 @@ class Difference {
 
     Difference(int[] elements){
         this.elements = elements;
-        this.maximumDifference = 0;
     }
 
 	void computeDifference(){
 
-        for (int i = 0; i < elements.length; i++){
-
-            for (int j = i; j <elements.length; j++){
-                int diff = 0;
-                if(elements[i] >= elements[j]){
-                    diff = elements[i] - elements[j];
-                } else {
-                    diff = elements[j] - elements[i];
-                }
-
+        maximumDifference = 0;
+        for (int i = 0; i < elements.length - 1; i++){
+            for (int j = i + 1; j <elements.length; j++){
+                int diff = Math.abs(elements[i] - elements[j]);
                 if(diff > maximumDifference){
                     maximumDifference = diff;
                 }
@@ -33,7 +26,7 @@ class Difference {
         }
     }
 
-} // End of Difference class
+}
 
 public class Solution {
 
