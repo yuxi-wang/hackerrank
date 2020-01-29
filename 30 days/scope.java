@@ -19,10 +19,9 @@ class Difference {
         for (int i = 0; i < elements.length; i++){
 
             for (int j = i; j <elements.length; j++){
-                int diff = 0;S
+                int diff = 0;
                 if(elements[i] >= elements[j]){
                     diff = elements[i] - elements[j];
-                }
                 } else {
                     diff = elements[j] - elements[i];
                 }
